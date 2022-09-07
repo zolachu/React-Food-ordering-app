@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./HeaderCart.module.css";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -6,7 +6,11 @@ import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 
 const HeaderCart = (props) => {
   return (
-    <Button variant="outline-dark" className={styles.button}>
+    <Button
+      variant="outline-dark"
+      className={styles.button}
+      onClick={props.onShowCart}
+    >
       <span> Your Cart </span>
       <span>
         <AddShoppingCartIcon />

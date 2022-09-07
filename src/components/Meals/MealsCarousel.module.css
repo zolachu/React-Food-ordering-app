@@ -1,0 +1,21 @@
+.summary {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    color: white;
+  }
+  
+  .summary h3 {
+    font-size: 2rem;
+    margin-top: 10px;
+  }
+
+  .summary img {
+    width: 100vw;
+    object-fit: cover;
+  }
+
+  .carousel, .carouselItem {
+    height: 100%;
+  }
