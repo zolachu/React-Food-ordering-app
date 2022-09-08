@@ -1,10 +1,9 @@
-import { useState } from "react";
+import React from "react";
 import styles from "./MealItem.module.css";
-import MealItemForm from "./MealItemForm";
+import AddItemButton from "./AddItemButton";
 
 const MealItem = (props) => {
   const price = `$${props.price.toFixed(2)}`;
-  const [priceChange, setPriceChange] = useState(0);
 
   return (
     <li className={styles.meal}>
@@ -14,10 +13,11 @@ const MealItem = (props) => {
         <div className={styles.price}>{price}</div>
       </div>
       <div>
-        <MealItemForm
+        <AddItemButton
           name={props.name}
           price={props.price}
           description={props.description}
+          id={props.id}
         />
       </div>
     </li>

@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import styles from "./MealItemForm.module.css";
+import styles from "./AddItemButton.module.css";
 import AddItemModal from "./AddItemModal";
-import Input from "../../UI/Input";
 
-const MealItemForm = (props) => {
+const MealAddButton = (props) => {
   const [isAdd, setIsAdd] = useState(false);
 
   const clickHandler = (event) => {
@@ -17,21 +16,10 @@ const MealItemForm = (props) => {
 
   return (
     <div className={styles.form}>
-      <Input
-        label="Amount"
-        input={{
-          id: "amount_" + props.id,
-          type: "number",
-          min: "1",
-          max: "10",
-          step: "1",
-          defaultValue: "1",
-        }}
-      />
       <button onClick={clickHandler}>ADD</button>
       {isAdd && <AddItemModal onClose={closeHandler} {...props} />}
     </div>
   );
 };
 
-export default MealItemForm;
+export default MealAddButton;

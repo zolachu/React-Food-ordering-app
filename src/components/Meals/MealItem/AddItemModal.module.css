@@ -1,8 +1,26 @@
-.modal__footer, .modal__content {
+.modal__footer, .modal__content, .modal__amount {
     display:flex;
-    /* justify-content:space-between; */
+    justify-content:space-between;
 }
 
 .modal__content {
     justify-content:space-between;
+    border-bottom: 1px solid black;
 }
+
+.modal button {
+    font: inherit;
+    cursor: pointer;
+    background-color: #3a5fe7;
+    border: 1px solid #3a5fe7;
+    color: white;
+    padding: 0.25rem 2rem;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+  
+  .modal button:hover,
+  .modal button:active {
+    background-color: #1944df;
+    border-color: #1b46e1;
+  }
