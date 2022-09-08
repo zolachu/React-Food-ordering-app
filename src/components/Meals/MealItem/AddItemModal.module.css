@@ -1,11 +1,35 @@
-.modal__footer, .modal__content, .modal__amount {
+.modal__footer, .modal__content {
     display:flex;
     justify-content:space-between;
+
 }
 
+.modal__footer {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+.modal__amount {
+    display:flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
 .modal__content {
+    width: 100%;
     justify-content:space-between;
     border-bottom: 1px solid black;
+    /* align-items: center; */
+    border-bottom: 2px solid #3a5fe7;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    
+}
+
+.modal__footer {
+    align-items: center;
+    font-weight: bold;
+    margin: 1rem 0;
 }
 
 .modal button {
@@ -17,6 +41,8 @@
     padding: 0.25rem 2rem;
     border-radius: 20px;
     font-weight: bold;
+    width: 15rem;
+    text-align: left;
   }
   
   .modal button:hover,
