@@ -48,7 +48,6 @@ const AddItemModal = (props) => {
           </span>
 
           <Input
-            label="Amount"
             input={{
               id: "amount",
               type: "number",

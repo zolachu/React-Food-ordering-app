@@ -1,6 +1,6 @@
 
 .header {
-    position: relative;
+    position: fixed;
     padding: 0;
     width: 100%;
     z-index: 5;

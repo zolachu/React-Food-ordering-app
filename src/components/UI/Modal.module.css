@@ -15,14 +15,31 @@
     width: 70%;
     border: 1px solid #ccc;
     border-radius: 10px;
-    box-shadow: 1px 1px 1px black;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     padding: 16px;
     left: 15%;
     top: 20vh;
     box-sizing: border-box;
-    transition: all 0.3s ease-out;
+    animation: slide-down 300ms ease-out forwards;
+}
+@keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-3rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
 }
 
+@media (min-width: 768px) {
+.modal {
+    width: 40rem;
+    left: calc(50% - 20rem);
+}
+}
+  
 .modal__footer {
    
     height: 100px;

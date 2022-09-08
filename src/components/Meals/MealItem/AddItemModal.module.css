@@ -1,0 +1,8 @@
+.modal__footer, .modal__content {
+    display:flex;
+    /* justify-content:space-between; */
+}
+
+.modal__content {
+    justify-content:space-between;
+}
