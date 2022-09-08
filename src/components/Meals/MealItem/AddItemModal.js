@@ -4,12 +4,13 @@ import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 import CloseIcon from "@mui/icons-material/Close";
 import Input from "../../UI/Input";
-import { useState, useContext } from "react";
+import { useState, useContext, useRef } from "react";
 import CartContext from "../../../store/cart-context";
 
 const AddItemModal = (props) => {
   const Context = useContext(CartContext);
 
+  const amountInputRef = useRef();
   const [amount, setAmount] = useState(1);
 
   const decrementAmountHandler = () => {
@@ -23,14 +24,19 @@ const AddItemModal = (props) => {
   const changeHandler = (event) => setAmount(event.target.value);
 
   const addItemsHandler = () => {
+    const enteredAmount = amountInputRef.current.value;
+
     const item = {
       name: props.name,
       id: props.id,
-      amount: amount,
+      amount: +enteredAmount,
       price: props.price,
+      key: props.id,
     };
     Context.addItem(item);
-    console.log(`added ${amount} many items of ${props.name}`);
+    console.log(
+      `added ${enteredAmount} many items of ${props.name} ${props.id}`
+    );
   };
 
   return (
@@ -45,6 +51,7 @@ const AddItemModal = (props) => {
           <div className={styles.modal__amount}>
             <RemoveCircleOutlineIcon onClick={decrementAmountHandler} />
             <Input
+              ref={amountInputRef}
               input={{
                 id: "amount",
                 type: "number",
