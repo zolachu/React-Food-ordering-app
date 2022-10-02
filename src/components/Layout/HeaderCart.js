@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import styles from "./HeaderCart.module.css";
 import Button from "react-bootstrap/Button";
-import "bootstrap/dist/css/bootstrap.min.css";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import CartContext from "../../store/cart-context";
 

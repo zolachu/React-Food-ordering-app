@@ -1,15 +1,14 @@
-
 .header {
-    position: relative;
-    padding: 0;
+    position: fixed;
+    /* padding: 0.5rem; */
     width: 100%;
-    z-index: 5;
+    z-index: 50;
     background-color: white;
 }
-img {
-    max-height: 60px;
-    width:auto;
 
+.header img {
+    max-height: 70px;
+    width:auto;
 }
 
 .brandName {
